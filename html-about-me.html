@@ -7,6 +7,18 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.0.5"></script>
+
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=2.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=2.0.5"></script>
+
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=2.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=2.0.5"></script>
+
 <style type="text/css">
 body {
 		background-color: #999999; 
@@ -66,16 +78,14 @@ span {
      }	
 #line  {
       text-decoration: underline
-    }	 
+    }
+#img-1{
+        margin-left: 95px;    
+      }	
 </style>
 
 </head>
 <body>
-
-http://fancyapps.com/fancybox
-http://leandrovieira.com/projects/jquery/lightbox
-http://www.shadowbox-js.com/index.html
-http://jacklmoore.com/colorbox/
 
 
 <div class="navbar">
@@ -90,8 +100,9 @@ http://jacklmoore.com/colorbox/
         <div class="nav-collapse">
           <ul class="nav">
             <li><a href="html5.blog.html">Home</a></li>
-            <li><a href="http://www.facebook.com/profile.php?id=100002348138234">my facebook</a></li>
-            
+            <li><a href="http://www.facebook.com/profile.php?id=100002348138234">my facebook
+			</i></a></li>
+			<li><img style="-webkit-user-select: none" src="img/icon_facebook-1.png" width="20" height="20"></li>
 			<li class="dropdown active">
               <a href="#" class="dropdown-toggle active" data-toggle="dropdown">my blog<b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -149,9 +160,12 @@ http://jacklmoore.com/colorbox/
 </br>
 </br>
 
-<div class="m-2">
-<img class="btn btn-inverse" src="img/pic_001225480122.jpg" width="640" height="640" />
-</div>
+<a id="img-1" class="fancybox-button" rel="gallery1" href="img/pic_001225480122.jpg" title="my dragon">
+      <img class="btn btn-inverse" src="img/pic_001225480122.jpg" width="640" height="640" />	  
+</a>
+<a id="img-2" class="fancybox-button" rel="gallery1" href="img/cb.jpg" title="my dragon">   
+	  <img class="btn btn-inverse" src="img/cb.jpg" width="725" height="640" />
+</a>
 
  <div class="well alert alert-info" id="my-1">
     <h1 id="line">my like sites</h1>
@@ -172,6 +186,33 @@ http://jacklmoore.com/colorbox/
 	</br>
 	<h4>8!---Nickelodeon</h4>
   </div>
-  
+
+
+<script>
+		
+function v() {
+	$('fancybox-buttons').toggle();
+}
+
+		
+$(document).ready(function() {
+
+	$(".fancybox-button").fancybox({
+		prevEffect		: '-V',
+		nextEffect		: '--V',
+		closeBtn		: false,
+		helpers		: { 
+			title	: { type : 'inside' },
+			buttons	: {}
+		}
+	});
+		
+	$('img').click(v);
+	
+});
+
+
+
+</script>
 </body>
 </html>
