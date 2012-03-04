@@ -5,7 +5,9 @@
 
 <title>about misha</title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -80,7 +82,7 @@ span {
       text-decoration: underline
     }
 #img-1{
-        margin-left: 95px;    
+        margin-left: 50px;    
       }	
 </style>
 
@@ -161,11 +163,47 @@ span {
 </br>
 
 <a id="img-1" class="fancybox-button" rel="gallery1" href="img/pic_001225480122.jpg" title="my dragon">
-      <img class="btn btn-inverse" src="img/pic_001225480122.jpg" width="640" height="640" />	  
+      <img class="btn btn-inverse" src="img/pic_001225480122.jpg" width="288" height="288" />	  
 </a>
 <a id="img-2" class="fancybox-button" rel="gallery1" href="img/cb.jpg" title="my dragon">   
-	  <img class="btn btn-inverse" src="img/cb.jpg" width="725" height="640" />
+	  <img class="btn btn-inverse" src="img/cb.jpg" width="326.25" height="288" />
 </a>
+<a id="img-2" class="fancybox-button" rel="gallery1" href="img/3c676294cb24.jpg" title="he is I">   
+	  <img class="btn btn-inverse" src="img/3c676294cb24.jpg" width="221" height="221" />
+</a>
+<a id="img-2" class="fancybox-button" rel="gallery1" href="img/IMG_0321.jpg" title="he is I">   
+	  <img class="btn btn-inverse" src="img/IMG_0321.jpg" width="324" height="216" />
+</a>
+<a id="img-2" class="fancybox-button" rel="gallery1" href="img/49923b937d35.jpg" title="he is I">   
+	  <img class="btn btn-inverse" src="img/49923b937d35.jpg" width="221" height="221" />
+</a>
+
+</br>
+</br>
+
+<div class="progress progress-danger
+     progress-striped active">
+  <div class="bar"
+       style="width: 100%;"></div>
+</div>
+
+<div class="progress progress-info
+     progress-striped active">
+  <div class="bar"
+       style="width: 100%;"></div>
+</div>
+
+<div class="progress progress-important
+     progress-striped active">
+  <div class="bar"
+       style="width: 100%;"></div>
+</div>
+
+<div class="progress progress-success
+     progress-striped active">
+  <div class="bar"
+       style="width: 100%;"></div>
+</div>
 
  <div class="well alert alert-info" id="my-1">
     <h1 id="line">my like sites</h1>
@@ -186,7 +224,7 @@ span {
 	</br>
 	<h4>8!---Nickelodeon</h4>
   </div>
-
+  
 
 <script>
 		
@@ -209,8 +247,18 @@ $(document).ready(function() {
 		
 	$('img').click(v);
 	
+	$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
 });
-
 
 
 </script>
