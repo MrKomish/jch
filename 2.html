@@ -1,0 +1,52 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<style type="text/css">
+h1{
+     margin-right: 700px;
+     margin-left: 700px; 
+	 text-align: center;
+  } 
+.div{
+     position:relative;
+     top: 50px;
+	 text-align: center;
+  }    
+</style>
+
+</head>
+<div id="r-1">
+<body>
+<h1 class="alert alert-info">2+2=?<h1>
+
+<button class="btn btn-primary">45</button>
+<button class="btn btn-primary">8</button>
+<button id="yes" class="btn btn-primary">4</button>
+</div>
+<div class="alert alert-warning div">
+<h2>score:</h2>
+<h2 id="n100">0</h2>
+</div>
+<script>
+
+    $("#yes").click(function () {
+      $("#r-1").hide(1000, function () {
+        $("#r-1").remove();
+      });
+    });
+	
+	$("#yes").click(function () {
+    update($("#n100"));
+	});
+	
+	function update(j) {
+    var n = parseInt(j.text(), 10);
+    j.text(n + 100);
+    }
+	  
+</script>
+
+</body>
+</html>

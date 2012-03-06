@@ -1,0 +1,196 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<style type="text/css">
+
+div-2{
+       bottom: 100px;
+     }
+	 
+.m { 
+     margin-left: 292px;
+	 margin-right: 341px;
+	 text-align: center;
+   }	
+</style>
+
+</head>
+<body>
+
+<div>
+<canvas id="canvas1"  width="150" height="150"></canvas>
+
+<canvas id="canvas2"  width="150" height="150"></canvas>
+
+<canvas id="canvas3"  width="150" height="150"></canvas>
+
+<canvas id="canvas4"  width="150" height="150"></canvas>
+
+<canvas id="canvas5" width="150" height="150"></canvas>
+</div>
+
+<div class="div-2">
+
+<canvas id="canvas6" width="150" height="150"></canvas>
+
+<canvas id="canvas7" width="150" height="150"></canvas>
+
+<canvas id="canvas8" width="150" height="150"></canvas>
+
+<canvas id="canvas9" width="150" height="150"></canvas>
+
+<canvas id="canvas10" width="150" height="150"></canvas>
+
+</div>
+
+<div class="alert alert-warning m">
+<h2>Remained</h2>
+</br>
+<h1> 10</h1>
+</div>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas1').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#A7D30C');
+radgrad.addColorStop(0.8, '#019F62');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas2').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#0000ff');
+radgrad.addColorStop(0.8, '#0066ff');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas3').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#990000');
+radgrad.addColorStop(0.8 , '#cc0000');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas4').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#ffff00');
+radgrad.addColorStop(0.8, '#ffff99');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas5').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#999999');
+radgrad.addColorStop(0.8, '#cccccc');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas6').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#0000ff');
+radgrad.addColorStop(0.8, '#0066ff');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas7').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#990000');
+radgrad.addColorStop(0.8 , '#cc0000');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas8').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#ffff00');
+radgrad.addColorStop(0.8, '#ffff99');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas9').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#999999');
+radgrad.addColorStop(0.8, '#cccccc');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById('canvas10').getContext('2d');
+// Create gradients
+var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+radgrad.addColorStop(0, '#A7D30C');
+radgrad.addColorStop(0.8, '#019F62');
+radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+// draw shape
+ctx.fillStyle = radgrad;
+ctx.fillRect(0,0,150,150);
+</script>
+
+<script>
+      for (var i = 0; i < 0; i++) {
+      $('canvas').appendTo(document.body);
+    }
+    $('canvas').click(function () {
+      $(this).hide(1000, function () {
+        $(this).remove();
+      });
+    });
+	
+	$('canvas').click(function () {
+    update($('h1'));
+	});
+	
+	function update(j) {
+    var n = parseInt(j.text(), 10);
+    j.text(n - 1);
+    }
+	
+</script>
+	  
+</body>
+</html>

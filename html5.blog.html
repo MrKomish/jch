@@ -86,7 +86,8 @@ body {
           <ul class="nav">
             <li class="active"><a href="html5.blog.html">Home</a></li>
             <li><a href="http://www.facebook.com/profile.php?id=100002348138234">my facebook</a></li>
-            
+            <li><a class="various fancybox.iframe" href="1.html">my cool game!</a></li>
+			  
 			<li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">my blog<b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -124,6 +125,9 @@ body {
     <a href="http://www.facebook.com/profile.php?id=100002348138234">my facebook</a>
   </li>
   <li>
+    <a class="various fancybox.iframe" href="1.html">my cool game!</a>
+  </li>
+  <li>
     <li class="nav-header">my blog</li>
   </li>
   <li>
@@ -137,7 +141,7 @@ body {
   </li>
    <li class="nav-header">Useful for building web sites</li>
    <li>
-    <a href="http://twitter.github.com/bootstrap/">bootstrap for css</a>
+    <a class="various fancybox.iframe" href="http://twitter.github.com/bootstrap/">bootstrap for css</a>
    </li>
    <li>
 	<a href="http://jquery.com/">jquery for javascript</a>
@@ -208,7 +212,7 @@ body {
 	</br>
 	<h4>8!---Nickelodeon</h4>
   </div>
-
+  
   <script>
 		
 function v() {
@@ -232,7 +236,19 @@ $(document).ready(function() {
 	
 });
 
-
+$(document).ready(function() {
+	$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
 
 </script>
   
