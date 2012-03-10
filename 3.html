@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+<style>
+.div { background:#ece023; width:30px; 
+      height:40px; margin:2px; float:left; }
+#t-show-start{
+    font-size: 30px;
+    text-align: center;
+}
+#show-start{
+    margin-right: 740px;
+	margin-left: 740px;
+}		   
+</style>
+</head>
+<body>
+
+<div id="show-start" class="label label-important hide">
+<h1 id="t-show-start">sea fight</h1>
+</div>
+
+<table class="table table-striped table-bordered table-condensed">
+    <tr>
+      <th><div class="div"></div></th>
+      <th><div class="div"></div></th>
+    </tr>
+    <tr>
+      <td><div class="div"></div></td>
+      <td><div class="div"></div></td>
+    </tr>
+	</tbody>
+</table>
+
+<Canvas id="myCanvas4"></Canvas>
+
+<script>
+	$("#show-start").show(1000, function () {
+	  })
+</script>
+
+
+<script type="text/javascript">
+var elem = document.getElementById('myCanvas4');
+  // ????? ????????? ?-context
+  var context = elem.getContext('2d');
+  if (context) {
+context.lineWidth   = 4;
+// ????? ????
+context.beginPath();
+context.moveTo(100, 10);
+context.lineTo(10, 100);
+context.lineTo(100, 10);
+context.moveTo(10, 10);
+context.lineTo(100, 100);
+context.lineTo(10, 10);
+//?????
+context.stroke();
+context.closePath();
+}
+</script>
+
+</body>
+</html>

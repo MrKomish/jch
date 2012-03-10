@@ -1,51 +1,191 @@
 ﻿<!DOCTYPE>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/js/bootstrap-alert.js" />
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <style type="text/css">
-h1{
-     margin-right: 700px;
-     margin-left: 700px; 
+h1{ 
 	 text-align: center;
   } 
 .div{
      position:relative;
      top: 50px;
-	 text-align: center;
-  }    
+    } 
+h2 {
+	  text-align: center;
+   }  
 </style>
 
 </head>
-<div id="r-1">
+
 <body>
+<div id="r-1">
 <h1 class="alert alert-info">2+2=?<h1>
 
-<button class="btn btn-primary">45</button>
-<button class="btn btn-primary">8</button>
-<button id="yes" class="btn btn-primary">4</button>
+<button class="btn btn-primary no">45</button>
+<button class="btn btn-primary no">8</button>
+<button id="yes" class="btn btn-primary yes">4</button>
 </div>
+
+
+<div class="hide" id="r-2">
+<body>
+<h1 class="alert alert-info">5+5=?<h1>
+
+<button class="btn btn-primary no">8</button>
+<button class="btn btn-primary no">9</button>
+<button id="yes-2" class="btn btn-primary yes">10</button>
+
+
+</div>
+
+<div class="hide" id="r-3">
+<body>
+<h1 class="alert alert-info">8+4=?<h1>
+
+<button class="btn btn-primary no">13</button>
+<button id="yes-3" class="btn btn-primary yes">12</button>
+<button class="btn btn-primary no">15</button>
+
+</div>
+
+<div class="hide" id="r-4">
+<body>
+<h1 class="alert alert-info">7+3=?<h1>
+
+<button id="yes-4" class="btn btn-primary yes">10</button>
+<button class="btn btn-primary no">15</button>
+<button class="btn btn-primary no">17</button>
+
+</div>
+
+<div class="hide" id="r-5">
+<body>
+<h1 class="alert alert-info">8+5=?<h1>
+
+<button class="btn btn-primary no">16</button>
+<button class="btn btn-primary no">15</button>
+<button id="yes-5" class="btn btn-primary yes">13</button>
+
+</div>
+
+<div class="hide" id="r-6">
+<body>
+<h1 class="alert alert-info">7+2=?<h1>
+
+<button class="btn btn-primary no">13</button>
+<button id="yes-6" class="btn btn-primary yes">9</button>
+<button class="btn btn-primary no">7</button>
+
+</div>
+
 <div class="alert alert-warning div">
 <h2>score:</h2>
 <h2 id="n100">0</h2>
-</div>
-<script>
 
-    $("#yes").click(function () {
+</div>
+
+</br>
+</br>
+
+<div id="show-yes" class="label label-success hide">
+<h1>excellent!</h1>
+</div>
+
+<div id="show-no" class="label label-important hide">
+  <h1>don't worried it's not bad</h1>
+</div>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<h2 class="label label-info hide h2">excellent! you finish with 600 score<h2>
+
+<script>
+	
+	
+	$(".yes").click(function () {
+    update($("#n100")
+	);
+	$("#show-no").hide(1500, function () {
+	});
+	$("#show-yes").show(1500, function () {
+	});
+	});
+	
+	$("#yes").click(function () {
       $("#r-1").hide(1000, function () {
-        $("#r-1").remove();
+      });
+	  $("#r-2").show(1000, function () {
       });
     });
 	
+	$("#yes-2").click(function () {
+	  $("#r-2").hide(1000, function () {
+	  });
+	  $("#r-3").show(1000, function () {
+      });
+    });
+	
+	$("#yes-3").click(function () {
+	  $("#r-3").hide(1000, function () {
+	  });
+	  $("#r-4").show(1000, function () {
+      });
+    });
+	
+	$("#yes-4").click(function () {
+	  $("#r-4").hide(1000, function () {
+	  });
+	  $("#r-5").show(1000, function () {
+      });
+    });
+	
+	$("#yes-5").click(function () {
+	  $("#r-5").hide(1000, function () {
+	  });
+	  $("#r-6").show(1000, function () {
+      });
+    });
+	
+	$("#yes-6").click(function () {
+	  $("#r-6").hide(1000, function () {
+	  });
+	  $("#show-no").hide(1000, function () {
+	  });
+	  $("#show-yes").hide(1000, function () {
+	  });
+	  $(".h2").show(2000, function () {
+	  });
+    });
+	
 	$("#yes").click(function () {
-    update($("#n100"));
+	  $("#show-yes").show(1500, function () {
+      });
+	  $("#show-no").hide(1500, function () {
+      });
 	});
+	
 	
 	function update(j) {
     var n = parseInt(j.text(), 10);
     j.text(n + 100);
     }
-	  
+	
+	$(".no").click(function () {
+	  $("#show-no").show(1500, function () {
+	  });
+	  $("#show-yes").hide(1500, function () {
+      });
+	  $(this).hide(1000, function () {
+	  });
+	});
+	
 </script>
 
 </body>
