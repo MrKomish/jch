@@ -1,56 +1,182 @@
 <!DOCTYPE>
 <html>
 <head>
+
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 
 <style>
-.div { background:#ece023; width:30px; 
-      height:40px; margin:2px; float:left; }
-#t-show-start{
-    font-size: 30px;
+
+#show-start{
+    text-align: center; 
+    margin-top: 35px;
+}
+
+#show-start h1 {
+    color: #cc4919;
+    font-size: 250%;
+    margin-bottom: 10px;
+}
+#show-start h3 {
+    margin-bottom: 5px;    
+}
+
+#show-start select {
+    margin-bottom: 10px;    
+}
+
+table h3 {
     text-align: center;
 }
-#show-start{
-    margin-right: 740px;
-	margin-left: 740px;
-}		   
+
+table option {
+    text-align: center;
+}
+
 </style>
+
 </head>
 <body>
 
-<div id="show-start" class="label label-important hide">
-<h1 id="t-show-start">sea fight</h1>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">JCH</a>
+
+<ul class="nav">
+  <li class="active">
+    <a href="#">Start</a>
+  </li>
+  <li><a href="#">About</a></li>
+ 
+</ul>
+
+    </div>
+  </div>
 </div>
 
+<form class="well">
 
+<div id="show-start" class="hide">
 
-<Canvas id="myCanvas4"></Canvas>
+<h1>Sea Fight</h1>
+    
+<br/>
 
-<script>
-	$("#show-start").show(1000, function () {
-	  })
-</script>
+<div class="row-fluid">
+  <div class="span12">   
+    <h3>Number of players</h3>
+    <select id="Number" class="span1">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</optionon>
+    </select>
+</td>
+    <div class="row-fluid">
+      <div class="span6">
+    <h3>Number of boxes in Width:</h3>
+    <select id="boxes-Width" class="span1">
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    </select>
+    </div>
+      <div class="span6"> 
+    <h3>Number of boxes in Height:</h3>
+    <select id="boxes-Height" class="span1">
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    </select>
+    </div>
+    </div>
+  </div>
+</div>
 
+<br/>
+
+    <button class="btn btn-primary btn-large">Start the game!</button>
+    
+</div>
+
+</form>
+
+<h4 class="hide" id="show-1">hello</h4>
+
+<div id="board"></div>
+
+<canvas id="myCanvas4"></canvas>
 
 <script type="text/javascript">
-var elem = document.getElementById('myCanvas4');
-  // ????? ????????? ?-context
-  var context = elem.getContext('2d');
-  if (context) {
-context.lineWidth   = 4;
-// ????? ????
-context.beginPath();
-context.moveTo(100, 10);
-context.lineTo(10, 100);
-context.lineTo(100, 10);
-context.moveTo(10, 10);
-context.lineTo(100, 100);
-context.lineTo(10, 10);
-//?????
-context.stroke();
-context.closePath();
+
+$("#show-start").slideDown('fast');     
+
+// количество клеточек в строке
+var n = 5;
+
+// количество строк клеточек
+var m = 8;
+
+for (var j = 1; j <= m; j++) {
+
+
+
+for (var i = 1; i <= n; i++)
+{
+     var htmlForCanvas = '<canvas id="canvas-'+ j + '-' + i +'" width="100" height="100"></canvas>';
+     $('#board').append(htmlForCanvas);
+     
+     
+     var ctx = document.getElementById('canvas-'+ j + '-' + i).getContext('2d');
+     var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+     radgrad.addColorStop(0.8, '#ffffff');
+     radgrad.addColorStop(0.9, '#000000');  
+     radgrad.addColorStop(1, 'rgba(0, 0, 0,0)');
+     ctx.fillStyle = radgrad;
+     ctx.fillRect(0,0,100,100);
+     
 }
+
+    var htmlForbr = '<br/>';
+    $('#board').append(htmlForbr);
+
+}
+
+var elem = document.getElementById('myCanvas4');
+  
+var context = elem.getContext('2d');
+
+if (context) {
+    
+    context.lineWidth = 4;
+
+    context.beginPath();
+    context.moveTo(100, 10);
+    context.lineTo(10, 100);
+    context.lineTo(100, 10);
+    context.moveTo(10, 10);
+    context.lineTo(100, 100);
+    context.lineTo(10, 10);
+
+    context.stroke();
+    context.closePath();
+}
+
+$('canvas').click(function () {
+    $('#show-1').show('slow');
+});
+
 </script>
 
 </body>
