@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/seafight.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/seafight.css" />
+
+</head>
+<body>
+
+<!--  MENU STARTED -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">JCH</a>
+
+<ul class="nav">
+  <li class="active">
+    <a href="seafight.html">Start</a>
+  </li>
+  <li><a href="seafightabout.html">About</a></li>
+
+</ul>
+
+    </div>
+  </div>
+</div>
+<!-- MENU END -->
+
+<div class="container">
+
+<div id="show-start" class="hide">
+<h1>Sea Fight</h1>
+</div>
+
+<br/>
+
+<form id="game-params" class="well">
+
+<div class="row-fluid">
+         
+<div class="span12">
+
+<h3>Number of players</h3>
+
+<select id="Number" class="span1">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</optionon>
+</select>
+
+
+<div class="row-fluid">
+
+<div class="span6">
+
+    <h3>Number of boxes in Width:</h3>
+
+    <select id="boxes-Width" class="span1">
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    </select>
+
+</div>
+
+<div class="span6">
+    <h3>Number of boxes in Height:</h3>
+    <select id="boxes-Height" class="span1">
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    </select>
+</div>
+</div>
+
+
+
+</div>
+
+    <br/>
+
+    <button id="start" class="btn btn-primary btn-large">Start the game!</button>
+
+</div>
+
+
+</form>
+
+<h4 class="hide" id="show-1">hello</h4>
+
+<div id="board"></div>
+
+<canvas id="myCanvas4"></canvas>
+
+</div>
+
+</body>
+</html>
